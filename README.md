@@ -41,7 +41,7 @@
   <tbody>
     <tr>
       <td><code>DriverID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>Primary Key (PK)</td>
       <td>Unique identifier for the driver.</td>
     </tr>
@@ -53,13 +53,13 @@
     </tr>
     <tr>
       <td><code>Contact No.</code></td>
-      <td>VARCHAR(45)</td>
+      <td>INT(10)</td>
       <td>Unique Index</td>
       <td>Driver's contact number (unique).</td>
     </tr>
     <tr>
       <td><code>Experience</code></td>
-      <td>INT</td>
+      <td>Decimal(3,1)</td>
       <td></td>
       <td>Years of driving experience.</td>
     </tr>
@@ -81,25 +81,25 @@
   <tbody>
     <tr>
       <td><code>State</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td>Unique Index</td>
       <td>State where the location is situated.</td>
     </tr>
     <tr>
       <td><code>City</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td>Unique Index</td>
       <td>City name (unique).</td>
     </tr>
     <tr>
       <td><code>District</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td>Unique Index</td>
       <td>District name (unique).</td>
     </tr>
     <tr>
       <td><code>PinCode</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>Primary Key (PK)</td>
       <td>Pin code of the location (unique identifier).</td>
     </tr>
@@ -133,25 +133,25 @@
     </tr>
     <tr>
       <td><code>Model</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(15)</td>
       <td></td>
       <td>Car's model and year (e.g., VXI 2023).</td>
     </tr>
     <tr>
       <td><code>Fuel</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(10)</td>
       <td></td>
       <td>Type of fuel used (e.g., Petrol, Diesel, Electric).</td>
     </tr>
     <tr>
       <td><code>Driver_DriverID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>Foreign Key (FK)</td>
       <td>Links to the <code>Driver</code> table. Driver assigned to the car.</td>
     </tr>
     <tr>
       <td><code>Location_PinCode</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>Foreign Key (FK)</td>
       <td>Links to the <code>Location</code> table. Current location of the car.</td>
     </tr>
@@ -173,7 +173,7 @@
   <tbody>
     <tr>
       <td><code>Employee ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>Primary Key (PK)</td>
       <td>Unique identifier for the employee.</td>
     </tr>
@@ -185,13 +185,13 @@
     </tr>
     <tr>
       <td><code>Department</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(15)</td>
       <td></td>
       <td>Department the employee belongs to (e.g., HR, Sales).</td>
     </tr>
     <tr>
       <td><code>Designation</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(20)</td>
       <td></td>
       <td>Employee's job title (e.g., Manager, Executive).</td>
     </tr>
@@ -213,25 +213,25 @@
   <tbody>
     <tr>
       <td><code>DepartmentID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK</td>
       <td>Unique identifier for the Service Station/Department.</td>
     </tr>
     <tr>
       <td><code>Department Name</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td>Unique Index</td>
       <td>Name of the service station (e.g., Delhi Workshop).</td>
     </tr>
     <tr>
       <td><code>No. of Employees</code></td>
-      <td>VARCHAR(45)</td>
+      <td>INT(5)</td>
       <td></td>
       <td>Number of employees at this station.</td>
     </tr>
     <tr>
       <td><code>Employee_Employee ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>Links to the <code>Employee</code> table, identifying a key employee (e.g., supervisor/head).</td>
     </tr>
@@ -253,19 +253,19 @@
   <tbody>
     <tr>
       <td><code>Service ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>Primary Key (PK)</td>
       <td>Unique identifier for the type of service.</td>
     </tr>
     <tr>
       <td><code>Type</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td></td>
       <td>Description of the service (e.g., Full Car Wash, Engine Oil Change).</td>
     </tr>
     <tr>
       <td><code>Duration</code></td>
-      <td>VARCHAR(45)</td>
+      <td>DECIMAL(3,1)</td>
       <td></td>
       <td>Estimated duration of the service.</td>
     </tr>
@@ -287,25 +287,25 @@
   <tbody>
     <tr>
       <td><code>Payment ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>Primary Key (PK)</td>
       <td>Unique identifier for the payment transaction.</td>
     </tr>
     <tr>
       <td><code>Mode of Payment</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(20)</td>
       <td></td>
       <td>Method of payment (e.g., UPI, Credit Card, Cash).</td>
     </tr>
     <tr>
       <td><code>Amount</code></td>
-      <td>VARCHAR(45)</td>
+      <td>DECIMAL(10,2)</td>
       <td></td>
       <td>Total amount of the payment.</td>
     </tr>
     <tr>
       <td><code>Status</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(10)</td>
       <td></td>
       <td>Status of the payment (e.g., Success, Pending, Failed).</td>
     </tr>
@@ -327,7 +327,7 @@
   <tbody>
     <tr>
       <td><code>User ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK</td>
       <td>Unique identifier for the user/customer.</td>
     </tr>
@@ -339,25 +339,25 @@
     </tr>
     <tr>
       <td><code>City</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td></td>
       <td>User's city of residence.</td>
     </tr>
     <tr>
       <td><code>Age</code></td>
-      <td>INT</td>
+      <td>INT(3)</td>
       <td></td>
       <td>User's age.</td>
     </tr>
     <tr>
       <td><code>Service Category_Service ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>The primary service category associated with this user record (links to <code>Service Category</code>).</td>
     </tr>
     <tr>
       <td><code>Payment_Payment ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>The payment transaction associated with this user record (links to <code>Payment</code>).</td>
     </tr>
@@ -385,7 +385,7 @@
     </tr>
     <tr>
       <td><code>No. of Services</code></td>
-      <td>VARCHAR(45)</td>
+      <td>INT(5)</td>
       <td></td>
       <td>Total number of services performed on the car.</td>
     </tr>
@@ -397,7 +397,7 @@
     </tr>
     <tr>
       <td><code>Cost</code></td>
-      <td>VARCHAR(45)</td>
+      <td>DECIMAL(10,2)</td>
       <td></td>
       <td>Cost of the last service.</td>
     </tr>
@@ -409,13 +409,13 @@
     </tr>
     <tr>
       <td><code>Cars_CarID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>The car this history belongs to (links to <code>Cars</code>).</td>
     </tr>
     <tr>
       <td><code>Service Station_DepartmentID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>The station that performed the service (links to <code>Service Station</code>).</td>
     </tr>
@@ -437,19 +437,19 @@
   <tbody>
     <tr>
       <td><code>Booking ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK</td>
       <td>Unique identifier for the booking.</td>
     </tr>
     <tr>
       <td><code>Pickup Location</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td></td>
       <td>Location where the car will be picked up.</td>
     </tr>
     <tr>
       <td><code>Drop Location</code></td>
-      <td>VARCHAR(45)</td>
+      <td>VARCHAR(25)</td>
       <td></td>
       <td>Location where the car will be dropped off.</td>
     </tr>
@@ -461,13 +461,13 @@
     </tr>
     <tr>
       <td><code>User_User ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>The user who made the booking (links to <code>User</code>).</td>
     </tr>
     <tr>
       <td><code>Cars_CarID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>The car that was booked (links to <code>Cars</code>).</td>
     </tr>
@@ -490,25 +490,25 @@
   <tbody>
     <tr>
       <td><code>Booking_Booking ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>Composite FK component linking to the <code>Booking</code> table.</td>
     </tr>
     <tr>
       <td><code>Booking_User_User ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>Composite FK component linking to the <code>Booking</code> table.</td>
     </tr>
     <tr>
       <td><code>Booking_Cars_CarID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>Composite FK component linking to the <code>Booking</code> table.</td>
     </tr>
     <tr>
       <td><code>Service Category_Service ID</code></td>
-      <td>INT</td>
+      <td>INT(10)</td>
       <td>PK, Foreign Key (FK)</td>
       <td>The service added to the booking (links to <code>Service Category</code>).</td>
     </tr>
